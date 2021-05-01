@@ -1,0 +1,4 @@
+[Variables]
+plate_array = [('OneSided', 0.0)]
+plate_index = 0
+
