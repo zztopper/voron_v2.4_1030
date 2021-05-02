@@ -1,4 +1,9 @@
 [Variables]
+filament_loaded = 'true'
+filament_used = 33234.8132
+filterusetime = 13792
+lastservicetime = 13792
 plate_array = [('OneSided', 0.0)]
 plate_index = 0
+totalprintingtime = 13792
 
