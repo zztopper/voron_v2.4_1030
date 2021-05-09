@@ -1,4 +1,4 @@
 printer-*.cfg
 .fluidd*
-telegram_config.sh
-application.conf
+telegram.conf
+
