@@ -1,4 +1,4 @@
 printer-*.cfg
 .fluidd*
 telegram.conf
-
+.variables.stb
