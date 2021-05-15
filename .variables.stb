@@ -3,7 +3,7 @@ filament_loaded = 'true'
 filament_used = 546479.29386
 filterusetime = 92667
 lastservicetime = 85977
-plate_array = [('TwoSided Flat', -0.035)]
-plate_index = 0
+plate_array = [('TwoSided_Flat', -0.035), ('OneSided_310', 0.0)]
+plate_index = 1
 totalprintingtime = 303229
 
