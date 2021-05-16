@@ -1,9 +1,9 @@
 [Variables]
 filament_loaded = 'true'
-filament_used = 546479.29386
-filterusetime = 92667
-lastservicetime = 85977
-plate_array = [('TwoSided_Flat', -0.035), ('OneSided_310', 0.0)]
+filament_used = 563398.11428
+filterusetime = 101252
+lastservicetime = 94562
+plate_array = [('TwoSided_Flat', -0.035), ('OneSided_310', -0.2)]
 plate_index = 1
-totalprintingtime = 303229
+totalprintingtime = 311814
 
