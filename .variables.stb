@@ -1,7 +1,7 @@
 [Variables]
-filament_loaded = 'false'
+filament_loaded = 'true'
 filament_used = 1934275.246
-filterusetime = 139347
-lastservicetime = 512374
-totalprintingtime = 1031127
+filterusetime = 140224
+lastservicetime = 513251
+totalprintingtime = 1032004
 
