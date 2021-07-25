@@ -21,7 +21,8 @@ camera="usb"
 #
 # Defaults to a resolution of 640x480 px and a framerate of 10 fps
 #
-camera_usb_options="-r 1920x1080 -f 30  -d /dev/v4l/by-id/usb-046d_Logitech_Webcam_C930e_FFF05D8E-video-index0"
+camera_usb_options="-r 1920x1080 -f 30 
+ #-d /dev/v4l/by-id/usb-046d_Logitech_Webcam_C930e_FFF05D8E-video-index0"
 
 ### Additional webcam devices known to cause problems with -f
 #
