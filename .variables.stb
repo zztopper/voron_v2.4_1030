@@ -1,5 +1,5 @@
 [Variables]
-filament_loaded = 'false'
+filament_loaded = 'true'
 filament_used = 4406046.60221
 filterusetime = 0
 lastservicetime = 1461865
