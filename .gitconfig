@@ -1,0 +1,2 @@
+[filter "ChatTokenFilter"]
+	clean=sed -r '/^chat_id|^bot_token/ d'
