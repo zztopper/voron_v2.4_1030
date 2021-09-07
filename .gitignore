@@ -1,6 +1,5 @@
 printer-*.cfg
 .fluidd*
-telegram.conf
 .variables.stb
 imgs/*
 input_shaper/*
