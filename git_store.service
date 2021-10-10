@@ -1,0 +1,13 @@
+[Unit]
+Description=Store Klipper config to github
+After=network-online.target
+ 
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /home/pi/klipper_config/git_store.sh
+ExecReload=/bin/bash /home/pi/klipper_config/git_store.sh
+User=pi
+Group=pi
+ 
+[Install]
+WantedBy=multi-user.target
