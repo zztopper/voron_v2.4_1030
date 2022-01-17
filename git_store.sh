@@ -2,5 +2,5 @@
 cd /home/pi/klipper_config
 TODAY=$(date)
 git add .
-git commit --signoff -m "$TODAY"
+git commit -m "$TODAY"
 git push origin main
