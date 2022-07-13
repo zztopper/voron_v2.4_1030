@@ -32,7 +32,7 @@ class ShellCommand:
             data = os.read(self.proc_fd, 4096)
         except Exception:
             pass
-        data = self.partial_output + data
+        data = self.partial_output + data.decode()
         if '\n' not in data:
             self.partial_output = data
             return
@@ -40,14 +40,18 @@ class ShellCommand:
             split = data.rfind('\n') + 1
             self.partial_output = data[split:]
             data = data[:split]
+        else:
+            self.partial_output = ""
         self.gcode.respond_info(data)
 
     cmd_RUN_SHELL_COMMAND_help = "Run a linux shell command"
     def cmd_RUN_SHELL_COMMAND(self, params):
+        gcode_params = params.get('PARAMS','')
+        gcode_params = shlex.split(gcode_params)
         reactor = self.printer.get_reactor()
         try:
             proc = subprocess.Popen(
-                self.command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+                self.command + gcode_params, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
         except Exception:
             logging.exception(
                 "shell_command: Command {%s} failed" % (self.name))
