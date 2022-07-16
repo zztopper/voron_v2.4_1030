@@ -1,79 +1,76 @@
 [server]
-host: 0.0.0.0
-port: 7125
-enable_debug_logging: False
-klippy_uds_address: /tmp/klippy_uds
+host = 0.0.0.0
+port = 7125
+enable_debug_logging = False
+klippy_uds_address = /tmp/klippy_uds
 
 [file_manager]
-config_path: /home/pi/klipper_config
-log_path: /home/pi/klipper_logs
+config_path = /home/pi/klipper_config
+log_path = /home/pi/klipper_logs
 
 [database]
-database_path: ~/.moonraker_database
+database_path = ~/.moonraker_database
 
 [data_store]
-temperature_store_size: 3600
-gcode_store_size:  2000
-
-
+temperature_store_size = 3600
+gcode_store_size = 2000
 
 [authorization]
-#enabled: True
-#api_key_file: ~/.moonraker_api_key
-trusted_clients:
-    127.0.0.1
-    172.16.0.0/12
-    10.20.0.0/16
-    10.100.1.17
-    10.100.1.25
-    ::1/128
-    FE80::/10
-cors_domains:
-    http://*.local
-    http://my.mainsail.xyz
-    https://my.mainsail.xyz
-    http://app.fluidd.xyz
-    https://app.fluidd.xyz
-    http://10.20.0.50
-    http://10.20.0.50:*
+trusted_clients = 
+	127.0.0.1
+	172.16.0.0/12
+	10.20.0.0/16
+	10.100.1.17
+	10.100.1.25
+	::1/128
+	FE80::/10
+cors_domains = 
+	http://*.local
+	http://my.mainsail.xyz
+	https://my.mainsail.xyz
+	http://app.fluidd.xyz
+	https://app.fluidd.xyz
+	http://10.20.0.50
+	http://10.20.0.50:*
 
 [history]
 
-
 [update_manager]
-enable_repo_debug: True
-#distro: debian
-#enable_auto_refresh: True
+enable_repo_debug = True
 
 [update_manager client mainsail]
-type: web
-repo: mainsail-crew/mainsail
-path: ~/mainsail
+type = web
+repo = mainsail-crew/mainsail
+path = ~/mainsail
 
 [update_manager client moonraker-telegram-bot]
-#enable_auto_refresh: True
-type: git_repo
-primary_branch: development
-path: ~/moonraker-telegram-bot
-origin: https://github.com/nlef/moonraker-telegram-bot.git
-env: ~/moonraker-telegram-bot-env/bin/python
-requirements: scripts/requirements.txt
-install_script: scripts/install.sh
-
-
+type = git_repo
+primary_branch = development
+path = ~/moonraker-telegram-bot
+origin = https://github.com/nlef/moonraker-telegram-bot.git
+env = ~/moonraker-telegram-bot-env/bin/python
+requirements = scripts/requirements.txt
+install_script = scripts/install.sh
 
 [update_manager client z_calibration]
- type: git_repo
- path: /home/pi/klipper_z_calibration
- origin: https://github.com/protoloft/klipper_z_calibration.git
- install_script: install.sh
+type = git_repo
+path = /home/pi/klipper_z_calibration
+origin = https://github.com/protoloft/klipper_z_calibration.git
+install_script = install.sh
 
 [octoprint_compat]
 
 [update_manager led_effect]
-type: git_repo
-path: ~/klipper-led_effect
-origin: https://github.com/julianschill/klipper-led_effect.git
-is_system_service: False
+type = git_repo
+path = ~/klipper-led_effect
+origin = https://github.com/julianschill/klipper-led_effect.git
+is_system_service = False
 
+[update_manager KlipperScreen]
+type = git_repo
+path = /home/pi/KlipperScreen
+origin = https://github.com/jordanruthe/KlipperScreen.git
+env = /home/pi/.KlipperScreen-env/bin/python
+requirements = scripts/KlipperScreen-requirements.txt
+install_script = scripts/KlipperScreen-install.sh
 
