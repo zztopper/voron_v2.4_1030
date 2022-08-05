@@ -39,6 +39,10 @@ cors_domains =
 
 [history]
 
+[power voron_power]
+type = tasmota
+address = 10.20.0.52
+
 [update_manager]
 enable_repo_debug = True
 
