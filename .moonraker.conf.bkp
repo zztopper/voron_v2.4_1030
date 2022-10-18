@@ -8,6 +8,7 @@ klippy_uds_address = /tmp/klippy_uds
 config_path = /home/pi/klipper_config
 log_path = /home/pi/klipper_logs
 enable_object_processing = True
+queue_gcode_uploads = True
 
 [database]
 database_path = ~/.moonraker_database
@@ -34,6 +35,8 @@ cors_domains =
 	http://10.20.0.50:*
 
 [history]
+
+[job_queue]
 
 [power voron_power]
 type = homeassistant
