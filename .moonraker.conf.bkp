@@ -1,17 +1,13 @@
 [server]
 host = 0.0.0.0
 port = 7125
-enable_debug_logging = False
 klippy_uds_address = /tmp/klippy_uds
 
 [file_manager]
-config_path = /home/pi/klipper_config
-log_path = /home/pi/klipper_logs
 enable_object_processing = True
 queue_gcode_uploads = True
 
 [database]
-database_path = ~/.moonraker_database
 
 [data_store]
 temperature_store_size = 3600
@@ -47,7 +43,6 @@ token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmYmY0MzE2NjVkMjU0YjIxYTM
 locked_while_printing = True
 
 [update_manager]
-enable_repo_debug = True
 
 [update_manager client mainsail]
 type = web
