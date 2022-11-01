@@ -1,0 +1,8 @@
+[filter "ChatTokenFilter"]
+		clean=sed -r '/^chat_id|^bot_token|^api_token/ d'
+		required
+[credential]
+	helper = store
+[user]
+	email = zztopper@gmail.com
+	name = Alexander Spassky
