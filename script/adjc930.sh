@@ -22,8 +22,8 @@ if [ ! -f /usr/bin/v4l2-ctl ]; then
 
 # the v4l2-ctl commands I want to run in the order I want to run them 
 # (to find the controls you can use the command v4l2-ctl -l)
-vcmd[0]="/usr/bin/v4l2-ctl -c focus_auto=0 -c white_balance_temperature_auto=0 -c power_line_frequency=1"
-vcmd[1]="/usr/bin/v4l2-ctl -c focus_absolute=0 -c white_balance_temperature=6500 -c zoom_absolute=100"
+vcmd[0]="/usr/bin/v4l2-ctl -c focus_automatic_continuous=0 -c white_balance_automatic=0 -c power_line_frequency=1 -d /dev/v4l/by-id/usb-046d_Logitech_Webcam_C930e_FFF05D8E-video-index0"
+vcmd[1]="/usr/bin/v4l2-ctl -c focus_absolute=0 -c white_balance_temperature=6500 -c zoom_absolute=100 -d /dev/v4l/by-id/usb-046d_Logitech_Webcam_C930e_FFF05D8E-video-index0"
 
 exe=${vcmd[0]%% *}                        # this is the command i.e. /usr/bin/v4l2-ctl
 logstring="V4L2-CTL"
