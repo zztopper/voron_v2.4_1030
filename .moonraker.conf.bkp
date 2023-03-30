@@ -34,6 +34,12 @@ cors_domains =
 
 [job_queue]
 
+[wled case]
+type = http
+address = 10.20.0.64
+chain_count = 241
+initial_preset = 1
+
 [power voron_power]
 type = homeassistant
 address = 10.20.0.10
@@ -60,12 +66,6 @@ install_script = scripts/install.sh
 
 [octoprint_compat]
 
-[update_manager led_effect]
-type = git_repo
-path = ~/klipper-led_effect
-origin = https://github.com/julianschill/klipper-led_effect.git
-is_system_service = False
-
 [update_manager KlipperScreen]
 type = git_repo
 path = /home/pi/KlipperScreen
@@ -74,9 +74,9 @@ env = /home/pi/.KlipperScreen-env/bin/python
 requirements = scripts/KlipperScreen-requirements.txt
 install_script = scripts/KlipperScreen-install.sh
 
-[update_manager crowsnest]
+[update_manager camera-streamer]
 type = git_repo
-path = ~/crowsnest
-origin = https://github.com/mainsail-crew/crowsnest.git
-managed_services = crowsnest
+path = ~/camera-streamer
+origin = https://github.com/ayufan/camera-streamer.git
+managed_services = camera-streamer
 
