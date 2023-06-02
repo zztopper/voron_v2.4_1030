@@ -30,6 +30,8 @@ cors_domains =
 	https://voron.zztopper.ru
 	http://10.20.0.50:*
 
+[zeroconf]
+
 [history]
 
 [job_queue]
