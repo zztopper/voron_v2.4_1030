@@ -26,7 +26,7 @@
 [crowsnest]
 log_path: /home/pi/printer_data/logs/crowsnest.log
 log_level: verbose                      # Valid Options are quiet/verbose/debug
-delete_log: true                       # Deletes log on every restart, if set to true
+delete_log: false                       # Deletes log on every restart, if set to true
 no_proxy: false
 
 [cam 1]
@@ -35,9 +35,8 @@ mode: camera-streamer                         # ustreamer - Provides mjpg and sn
 enable_rtsp: true                      # If camera-streamer is used, this enables also usage of an rtsp server
 rtsp_port: 8554                         # Set different ports for each device!
 port: 8080                              # HTTP/MJPG Stream/Snapshot Port
-device: /dev/video0                     # See Log for available ...
+device: /dev/v4l/by-id/usb-046d_Logitech_Webcam_C930e_FFF05D8E-video-index0                     # See Log for available ...
 resolution: 1920x1080                     # widthxheight format
 max_fps: 30                             # If Hardware Supports this it will be forced, otherwise ignored/coerced.
 #custom_flags:                          # You can run the Stream Services with custom flags.
-v4l2ctl: white_balance_automatic=0,power_line_frequency=1,white_balance_temperature=3000,focus_automatic_continuous=0,focus_absolute=30,zoom_absolute=100
-# Add v4l2-ctl parameters to setup your camera, see Log what your cam is capable of.
+#v4l2ctl:                               # Add v4l2-ctl parameters to setup your camera, see Log what your cam is capable of.
