@@ -38,7 +38,7 @@ cors_domains =
 
 [wled case]
 type = http
-address = 10.20.0.54
+address = 10.20.0.100
 chain_count = 426
 initial_preset = 1
 
@@ -47,7 +47,7 @@ type = homeassistant
 address = 10.20.0.10
 port = 8123
 device = switch.voron2_power_power
-token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJmYmY0MzE2NjVkMjU0YjIxYTM1ZjdkMWY5ZWU0MWVjMCIsImlhdCI6MTY2MzkzOTY5NiwiZXhwIjoxOTc5Mjk5Njk2fQ.4cbbo8PiBHgPu8iyjUBuv4Qhcc3zWynRuUoLXXxN8dg
+token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIwMmI4N2I2NzYxNmM0ZjRiYjJiYzQ1YzZjOTFmN2YzYyIsImlhdCI6MTcwNTU5ODQ2OSwiZXhwIjoyMDIwOTU4NDY5fQ.aUuHqD0SLZuFap5BDMrSNyuhCmvnskbXZNTiECSPADI
 locked_while_printing = True
 
 [update_manager]
