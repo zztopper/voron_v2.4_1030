@@ -57,6 +57,13 @@ type = web
 repo = mainsail-crew/mainsail
 path = ~/mainsail
 
+[update_manager belay]
+type = git_repo
+path = ~/belay_klippy_module
+origin = https://github.com/Annex-Engineering/Belay.git
+primary_branch = main
+managed_services = klipper
+
 [update_manager client moonraker-telegram-bot]
 type = git_repo
 primary_branch = development
