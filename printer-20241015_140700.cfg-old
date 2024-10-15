@@ -1,5 +1,3 @@
-[include mmu/base/*.cfg]
-[include mmu/optional/client_macros.cfg]
 
 #####################################################################
 #  MCU definition
@@ -45,21 +43,6 @@ minimum_cruise_ratio: 0.5
 max_z_velocity = 7.5
 max_z_accel = 300
 square_corner_velocity = 10
-
-[pause_resume]
-recover_velocity = 200
-
-[display_status]
-
-[virtual_sdcard]
-path: /home/pi/printer_data/gcodes
-
-[gcode_arcs]
-resolution: 0.1
-
-[respond]
-default_type: command
-
 
 #####################################################################
 # Pins definitions
@@ -133,7 +116,7 @@ default_type: command
 #####################################################################
 #  moonraker/mainsail
 ##################################################################### 
-# [include webclient.cfg]
+[include webclient.cfg]
 
 #####################################################################
 # Exclude objects
@@ -179,6 +162,21 @@ timeout: 14400
 #####################################################################
 [include KAMP_Settings.cfg]
 
+[gcode_macro PREHEAT]
+# initial_duration: 5
+gcode:
+  M104 S150
+  M140 S105
+  M141 S65
+  {action_respond_info("Preheating")}
+  G28
+  PARKBED
+  M106
+  #SET_FAN_SPEED FAN=filter SPEED=1
+  SET_FAN_SPEED FAN=inner_fans SPEED=1
+  SET_FAN_SPEED FAN=outer_fans SPEED=1
+  #M84
+
 [delayed_gcode INIT]
   initial_duration: 5
 gcode:
@@ -188,10 +186,10 @@ gcode:
   {action_respond_info("Preheating")}
   G28
   PARKBED
-  M106
-  SET_FAN_SPEED FAN=filter SPEED=1
-  SET_FAN_SPEED FAN=inner_fans SPEED=1
-  SET_FAN_SPEED FAN=outer_fans SPEED=1
+  # M106
+  # SET_FAN_SPEED FAN=filter SPEED=1
+  # SET_FAN_SPEED FAN=inner_fans SPEED=1
+  # SET_FAN_SPEED FAN=outer_fans SPEED=1
   #M84
   
 [delayed_gcode _CHECK_CONFIG]
@@ -522,7 +520,6 @@ gcode:
 #  File location of stored varibales
 ######################################################################
 [save_variables]
-# mmu__revision = 0
 filename: /home/pi/klipper_config/.variables.stb
 
 #*# <---------------------- SAVE_CONFIG ---------------------->
