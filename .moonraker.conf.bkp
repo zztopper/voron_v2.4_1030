@@ -90,13 +90,6 @@ origin = https://github.com/mainsail-crew/crowsnest.git
 managed_services = crowsnest
 install_script = tools/pkglist.sh
 
-[update_manager trad_rack]
-type = git_repo
-path = ~/trad_rack_klippy_module
-origin = https://github.com/Annex-Engineering/TradRack.git
-primary_branch = main
-managed_services = klipper
-
 [update_manager Klipper-Adaptive-Meshing-Purging]
 type = git_repo
 channel = dev
