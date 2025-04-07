@@ -57,13 +57,6 @@ type = web
 repo = mainsail-crew/mainsail
 path = ~/mainsail
 
-[update_manager belay]
-type = git_repo
-path = ~/belay_klippy_module
-origin = https://github.com/Annex-Engineering/Belay.git
-primary_branch = main
-managed_services = klipper
-
 [update_manager client moonraker-telegram-bot]
 type = git_repo
 primary_branch = development
@@ -110,6 +103,16 @@ managed_services = klipper
 enable_file_preprocessor = True
 enable_toolchange_next_pos = True
 update_spoolman_location = True
+
+[update_manager cartographer]
+type = git_repo
+path = ~/cartographer-klipper
+channel = stable
+origin = https://github.com/Cartographer3D/cartographer-klipper.git
+is_system_service = False
+managed_services = klipper
+info_tags = 
+	desc=Cartographer Probe
 
 [update_manager led_effect]
 type = git_repo
