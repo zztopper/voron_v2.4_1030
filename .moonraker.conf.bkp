@@ -17,7 +17,7 @@ gcode_store_size = 2000
 provider = systemd_dbus
 
 [authorization]
-force_logins = True
+force_logins = False
 trusted_clients = 
 	127.0.0.1
 	10.20.0.0/24
