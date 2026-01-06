@@ -212,7 +212,7 @@ gcode:
       M104 S150
       G0 Z{z_hop} F900
       BED_MESH_CALIBRATE
-      CARTOGRAPHER_TOUCH
+      # CARTOGRAPHER_TOUCH
       SET_GCODE_VARIABLE MACRO=PRINT_START VARIABLE=state VALUE='"Final"'
       UPDATE_DELAYED_GCODE ID=START_PRINT_WAIT DURATION=0.1
   {% elif state == 'Final' %}
@@ -223,14 +223,6 @@ gcode:
           M117 Heating Extruder
 	  Smart_Park
           M109 S{extruder|int} ; heat extruder and wait
-          
-          # Load filament after reaching target temperature
-          {% if printer.mmu is defined %}
-              _PRINT_AR T="Loading initial tool"
-              MMU_START_LOAD_INITIAL_TOOL
-              VORON_PURGE
-          {% endif %}
-          
       	  #PRIME_LINE
           G92 E0              ; reset Extruder
           M83                 ; relative extrusion
