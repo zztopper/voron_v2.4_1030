@@ -21,6 +21,7 @@ force_logins = False
 trusted_clients = 
 	127.0.0.1
 	10.20.0.0/24
+	10.21.0.0/24
 	172.16.0.0/12
 	::1/128
 	FE80::/10
@@ -51,11 +52,6 @@ token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIwMmI4N2I2NzYxNmM0ZjRiYjJ
 locked_while_printing = True
 
 [update_manager]
-
-[update_manager client mainsail]
-type = web
-repo = mainsail-crew/mainsail
-path = ~/mainsail
 
 [update_manager client moonraker-telegram-bot]
 type = git_repo
@@ -104,19 +100,33 @@ enable_file_preprocessor = True
 enable_toolchange_next_pos = True
 update_spoolman_location = True
 
-[update_manager cartographer]
-type = git_repo
-path = ~/cartographer-klipper
+[update_manager cartographer_plugin]
+type = python
 channel = stable
-origin = https://github.com/Cartographer3D/cartographer-klipper.git
+virtualenv = ~/klippy-env
+project_name = cartographer3d-plugin
 is_system_service = False
 managed_services = klipper
-info_tags = 
-	desc=Cartographer Probe
+info_tags = desc=Cartographer Plugin
 
 [update_manager led_effect]
 type = git_repo
 path = ~/klipper-led_effect
 origin = https://github.com/julianschill/klipper-led_effect.git
 is_system_service = False
+
+[update_manager mainsail-config]
+managed_services = klipper
+origin = https://github.com/mainsail-crew/mainsail-config.git
+path = /home/pi/mainsail-config
+primary_branch = master
+type = git_repo
+
+[update_manager mainsail]
+path = /home/pi/mainsail
+repo = mainsail-crew/mainsail
+channel = stable
+type = web
+persistent_files = 
+	config.json
 
