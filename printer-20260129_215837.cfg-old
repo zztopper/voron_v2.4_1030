@@ -503,7 +503,6 @@ gcode:
 [save_variables]
 filename: /home/pi/klipper_config/.variables.stb
 
-[include AFC/*.cfg]
 #*# <---------------------- SAVE_CONFIG ---------------------->
 #*# DO NOT EDIT THIS BLOCK OR BELOW. The contents are auto-generated.
 #*#
