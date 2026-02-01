@@ -51,6 +51,10 @@ device = switch.voron2_power_power
 token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiIwMmI4N2I2NzYxNmM0ZjRiYjJiYzQ1YzZjOTFmN2YzYyIsImlhdCI6MTcwNTU5ODQ2OSwiZXhwIjoyMDIwOTU4NDY5fQ.aUuHqD0SLZuFap5BDMrSNyuhCmvnskbXZNTiECSPADI
 locked_while_printing = True
 
+[spoolman]
+server = https://spoolman.r2bnj.ru
+sync_rate = 5
+
 [update_manager]
 
 [update_manager client moonraker-telegram-bot]
