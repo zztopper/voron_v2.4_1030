@@ -1,0 +1,133 @@
+{
+  "schema": 2,
+  "machine": {
+    "filament_diameter": 1.75,
+    "nozzle_diameter": 0.5,
+    "heater_ceiling": 340
+  },
+  "defaults": {
+    "chunk_volume": 12,
+    "finish_volume": 60,
+    "temperature_wait_timeout": 150,
+    "temperature_tolerance": 2,
+    "cooling_retract": 0.8
+  },
+  "materials": {
+    "PLA": {
+      "enabled": true,
+      "print_min": 190,
+      "print_max": 240,
+      "flush_min": 210,
+      "flush_preferred": 240,
+      "transition_max": 250,
+      "flush_flow": 6,
+      "load_flow": 8,
+      "sensitive_above": 235,
+      "exposure_seconds": 75,
+      "print_temperature": 220
+    },
+    "ABS": {
+      "enabled": true,
+      "print_min": 245,
+      "print_max": 280,
+      "flush_min": 245,
+      "flush_preferred": 265,
+      "transition_max": 280,
+      "flush_flow": 6,
+      "load_flow": 8,
+      "sensitive_above": 280,
+      "exposure_seconds": 90,
+      "print_temperature": 265
+    },
+    "ASA": {
+      "enabled": true,
+      "print_min": 240,
+      "print_max": 280,
+      "flush_min": 245,
+      "flush_preferred": 265,
+      "transition_max": 280,
+      "flush_flow": 6,
+      "load_flow": 8,
+      "sensitive_above": 280,
+      "exposure_seconds": 90,
+      "print_temperature": 265
+    },
+    "PETG": {
+      "enabled": false,
+      "print_min": 220,
+      "print_max": 270,
+      "flush_min": 230,
+      "flush_preferred": 250,
+      "transition_max": 275,
+      "flush_flow": 5,
+      "load_flow": 6,
+      "sensitive_above": 260,
+      "exposure_seconds": 75
+    },
+    "PA66GF": {
+      "enabled": false,
+      "print_min": 280,
+      "print_max": 330,
+      "flush_min": 290,
+      "flush_preferred": 310,
+      "transition_max": 335,
+      "flush_flow": 4,
+      "load_flow": 6,
+      "sensitive_above": 325,
+      "exposure_seconds": 90
+    }
+  },
+  "aliases": {
+    "PLA+": "PLA",
+    "Nylon GF66": "PA66GF",
+    "Nylon66GF": "PA66GF",
+    "PA66-GF": "PA66GF",
+    "GF66": "PA66GF"
+  },
+  "pairs": {
+    "ABS->PLA": {
+      "flush_temperature": 250,
+      "displace_volume": 60,
+      "mix_volume": 60,
+      "flush_flow": 6
+    },
+    "ASA->PLA": {
+      "flush_temperature": 250,
+      "displace_volume": 60,
+      "mix_volume": 60,
+      "flush_flow": 6
+    },
+    "PLA->ABS": {
+      "flush_temperature": 250,
+      "displace_volume": 60,
+      "mix_volume": 60,
+      "flush_flow": 6
+    },
+    "PLA->ASA": {
+      "flush_temperature": 250,
+      "displace_volume": 60,
+      "mix_volume": 60,
+      "flush_flow": 6
+    },
+    "PLA->PLA": {
+      "flush_temperature": 240,
+      "displace_volume": 45,
+      "mix_volume": 45,
+      "flush_flow": 6
+    },
+    "ABS->ASA": {
+      "displace_volume": 45,
+      "mix_volume": 45
+    },
+    "ASA->ABS": {
+      "displace_volume": 45,
+      "mix_volume": 45
+    }
+  },
+  "calibration_notes": {
+    "temperature_ranges": "PLA 190..240; ASA 240..280; FDPlast/eSUN ABS lower limit 245, upper 280. Local Orca profiles and user settings.",
+    "short_transition_override": "PLA 250C is a short, provisional transition allowance above its Orca 240C range; 75-second guard. Validate on this hotend before routine use.",
+    "flow": "6mm3/s purge, 8mm3/s head loading: below local PLA 12 and ASA 18..24mm3/s print limits.",
+    "unsupported": "PETG and PA66GF disabled because they are not currently used or calibrated. No automatic bridge selection."
+  }
+}

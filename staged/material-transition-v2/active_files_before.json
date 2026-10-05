@@ -1,0 +1,8 @@
+{
+  "/home/pi/printer_data/config/printer.cfg": "c3bac3b9cca1265b664801db87b96ba4ef7fb54db4520e4b82ccde7fe8aae6c7",
+  "/home/pi/printer_data/config/fan.cfg": "d918044d0f4b81afbedc91a16d8e9c21df10a651e04442593d1e6a6292abf3c0",
+  "/home/pi/printer_data/config/material_transition.cfg": "8a86adfe06afb7f3c477c1b1dcda379ae6437d31b33a7985d9184d217cf71c82",
+  "/home/pi/printer_data/config/script/afc_material_transition.py": "c7983aab5d82b79514ea84fece207d0a40db280644c9a690febcbf2056893372",
+  "/home/pi/printer_data/config/AFC/macros/Poop.cfg": "aad3c7d96973b9e285e53e52323af33e225c1328470cc04c7bf3ef7f524c2d9d",
+  "/home/pi/printer_data/config/AFC/macros/Cut.cfg": "c09bfca254106125ffdfc62d6bcb7e16d8c91fa1dcc64aa7249cbbdd7e3e4bc5"
+}

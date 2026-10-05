@@ -1,0 +1,35 @@
+[Variables]
+blobifier = {'current_blobs': 0, 'last_shake': 0}
+filament_loaded = 'false'
+mmu__revision = 10961
+mmu_calibration_bowden_home = 'encoder'
+mmu_calibration_bowden_lengths = [1243.8, 1243.8, 1243.8, 1243.8]
+mmu_calibration_clog_length = 10.0
+mmu_encoder_resolution = 0.689853
+mmu_gear_rotation_distances = [22.959004, 22.959004, 22.959004, 22.959004]
+mmu_selector_bypass = -1
+mmu_selector_offsets = [0.0, 17.0, 34.0, 51.0]
+mmu_servo_angles = {'down': 0, 'up': 130, 'move': 80}
+mmu_state_enable_endless_spool = 0
+mmu_state_endless_spool_groups = [0, 3, 2, 1]
+mmu_state_filament_pos = 10
+mmu_state_filament_remaining = 5.8
+mmu_state_filament_remaining_color = '6d17c3e3'
+mmu_state_gate_color = ['000000ff', '6d17c3e3', '', '']
+mmu_state_gate_filament_name = ['HTP ASA', 'Bamtco PLA', '', '']
+mmu_state_gate_material = ['ASA', 'PLA', '', '']
+mmu_state_gate_selected = 0
+mmu_state_gate_speed_override = [100, 100, 100, 100]
+mmu_state_gate_spool_id = [-1, -1, -1, -1]
+mmu_state_gate_status = [0, 0, -1, 1]
+mmu_state_gate_temperature = [210, 210, 210, 210]
+mmu_state_last_tool = 1
+mmu_state_tool_selected = 0
+mmu_state_tool_to_gate_map = [0, 1, 2, 3]
+mmu_statistics_counters = {'mmu_restarts': {'count': 292, 'limit': -1, 'warning': ''}, 'servo_down': {'count': 2665, 'limit': 5000, 'warning': 'Inspect servo mechanism for wear/damage', 'pause': False}, 'cutter_blade': {'count': 4, 'limit': 3000, 'warning': 'Inspect/replace filament cutting blade', 'pause': False}}
+mmu_statistics_gate_0 = {'pauses': 120, 'loads': 203, 'load_distance': 261319.766, 'load_delta': 65128.787, 'unloads': 236, 'unload_distance': 78081.305, 'unload_delta': 21228.73, 'load_failures': 72, 'unload_failures': 48, 'quality': 0.8549164456623682, 'servo_retries': 0}
+mmu_statistics_gate_1 = {'pauses': 61, 'loads': 120, 'load_distance': 152880.512, 'load_delta': 39424.392, 'unloads': 172, 'unload_distance': 62527.2, 'unload_delta': 13777.967, 'load_failures': 34, 'unload_failures': 57, 'quality': 0.8599919111920966, 'servo_retries': 1}
+mmu_statistics_gate_2 = {'pauses': 19, 'loads': 77, 'load_distance': 89760.766, 'load_delta': 32042.512, 'unloads': 94, 'unload_distance': 53673.6, 'unload_delta': 8770.328, 'load_failures': 24, 'unload_failures': 20, 'quality': 0.9728109684092263, 'servo_retries': 1}
+mmu_statistics_gate_3 = {'pauses': 1, 'loads': 0, 'load_distance': 0.0, 'load_delta': 0.0, 'unloads': 0, 'unload_distance': 0.0, 'unload_delta': 0.0, 'load_failures': 0, 'unload_failures': 0, 'quality': 1.1910661311758475, 'servo_retries': 0}
+mmu_statistics_swaps = {'unload': 14717.67, 'pre_load': 133.69, 'load': 9496.0, 'post_load': 178.08, 'total_swaps': 265, 'swaps_since_pause': 0, 'swaps_since_pause_record': 13, 'total': 10809.55, 'pre_unload': 246.1, 'total_pauses': 182, 'post_unload': 96.5, 'pause': 135740.41, 'purge': 8.7, 'form_tip': 298.25}
+

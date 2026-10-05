@@ -1,0 +1,6 @@
+{
+  "script/afc_material_transition.py": true,
+  "material_transition.cfg": true,
+  "material_transition_profiles.json": false,
+  "material_transition_purge.cfg": false
+}

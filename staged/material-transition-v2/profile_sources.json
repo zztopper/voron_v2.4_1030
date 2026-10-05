@@ -1,0 +1,345 @@
+{
+  "user_working_temperatures": {
+    "PLA": 220,
+    "ABS": 265,
+    "ASA": 265
+  },
+  "profile_evidence": [
+    {
+      "path": "/Users/zztop/Library/Application Support/OrcaSlicer/user/3643112429/filament/ABSMaker PETG - Violet.json",
+      "fields": {
+        "filament_max_volumetric_speed": [
+          "18"
+        ],
+        "filament_vendor": [
+          "ABSMaker"
+        ],
+        "inherits": "Voron Generic PETG"
+      }
+    },
+    {
+      "path": "/Users/zztop/Library/Application Support/OrcaSlicer/user/3643112429/filament/Eryone Silk Tri-Color PLA.json",
+      "fields": {
+        "filament_max_volumetric_speed": [
+          "16"
+        ],
+        "inherits": "Voron Generic PLA",
+        "nozzle_temperature": [
+          "210"
+        ],
+        "nozzle_temperature_initial_layer": [
+          "210"
+        ]
+      }
+    },
+    {
+      "path": "/Users/zztop/Library/Application Support/OrcaSlicer/user/3643112429/filament/FDPlast ABS-CF.json",
+      "fields": {
+        "filament_max_volumetric_speed": [
+          "20"
+        ],
+        "filament_vendor": [
+          "FDPlast"
+        ],
+        "inherits": "Voron Generic ABS",
+        "nozzle_temperature": [
+          "270"
+        ],
+        "nozzle_temperature_initial_layer": [
+          "270"
+        ],
+        "nozzle_temperature_range_low": [
+          "245"
+        ]
+      }
+    },
+    {
+      "path": "/Users/zztop/Library/Application Support/OrcaSlicer/user/3643112429/filament/FDPlast ABS.json",
+      "fields": {
+        "filament_max_volumetric_speed": [
+          "20"
+        ],
+        "filament_vendor": [
+          "FDPlast"
+        ],
+        "inherits": "Voron Generic ABS",
+        "nozzle_temperature_range_low": [
+          "245"
+        ]
+      }
+    },
+    {
+      "path": "/Users/zztop/Library/Application Support/OrcaSlicer/user/3643112429/filament/FDPlast PLA.json",
+      "fields": {
+        "inherits": "Voron Generic PLA"
+      }
+    },
+    {
+      "path": "/Users/zztop/Library/Application Support/OrcaSlicer/user/3643112429/filament/HTP ABS+.json",
+      "fields": {
+        "filament_max_volumetric_speed": [
+          "20"
+        ],
+        "inherits": "Voron Generic ABS",
+        "nozzle_temperature_range_low": [
+          "245"
+        ]
+      }
+    },
+    {
+      "path": "/Users/zztop/Library/Application Support/OrcaSlicer/user/3643112429/filament/HTP ASA Black.json",
+      "fields": {
+        "filament_max_volumetric_speed": [
+          "24"
+        ],
+        "filament_type": [
+          "ASA"
+        ],
+        "filament_vendor": [
+          "HTP"
+        ],
+        "inherits": "Voron Generic ABS",
+        "nozzle_temperature": [
+          "260"
+        ],
+        "nozzle_temperature_initial_layer": [
+          "260"
+        ],
+        "nozzle_temperature_range_high": [
+          "280"
+        ],
+        "nozzle_temperature_range_low": [
+          "240"
+        ]
+      }
+    },
+    {
+      "path": "/Users/zztop/Library/Application Support/OrcaSlicer/user/3643112429/filament/HTP ASA Gray.json",
+      "fields": {
+        "filament_max_volumetric_speed": [
+          "18"
+        ],
+        "filament_type": [
+          "ASA"
+        ],
+        "filament_vendor": [
+          "HTP"
+        ],
+        "inherits": "Voron Generic ABS",
+        "nozzle_temperature": [
+          "265"
+        ],
+        "nozzle_temperature_initial_layer": [
+          "265"
+        ],
+        "nozzle_temperature_range_high": [
+          "280"
+        ],
+        "nozzle_temperature_range_low": [
+          "240"
+        ]
+      }
+    },
+    {
+      "path": "/Users/zztop/Library/Application Support/OrcaSlicer/user/3643112429/filament/HTP ASA Green.json",
+      "fields": {
+        "filament_max_volumetric_speed": [
+          "24"
+        ],
+        "filament_type": [
+          "ASA"
+        ],
+        "filament_vendor": [
+          "HTP"
+        ],
+        "inherits": "Voron Generic ABS"
+      }
+    },
+    {
+      "path": "/Users/zztop/Library/Application Support/OrcaSlicer/user/3643112429/filament/HTP ASA Lime Green.json",
+      "fields": {
+        "filament_max_volumetric_speed": [
+          "24"
+        ],
+        "filament_type": [
+          "ASA"
+        ],
+        "filament_vendor": [
+          "H-T-P"
+        ],
+        "inherits": "Voron Generic ABS"
+      }
+    },
+    {
+      "path": "/Users/zztop/Library/Application Support/OrcaSlicer/user/3643112429/filament/HTP ASA Red.json",
+      "fields": {
+        "filament_max_volumetric_speed": [
+          "24"
+        ],
+        "filament_type": [
+          "ASA"
+        ],
+        "filament_vendor": [
+          "HTP"
+        ],
+        "inherits": "Voron Generic ABS"
+      }
+    },
+    {
+      "path": "/Users/zztop/Library/Application Support/OrcaSlicer/user/3643112429/filament/U3Print ABS-CF.json",
+      "fields": {
+        "filament_max_volumetric_speed": [
+          "20"
+        ],
+        "filament_type": [
+          "ABS"
+        ],
+        "filament_vendor": [
+          "FDPlast"
+        ],
+        "inherits": "Voron Generic ABS",
+        "nozzle_temperature": [
+          "250"
+        ],
+        "nozzle_temperature_initial_layer": [
+          "250"
+        ],
+        "nozzle_temperature_range_high": [
+          "280"
+        ],
+        "nozzle_temperature_range_low": [
+          "245"
+        ]
+      }
+    },
+    {
+      "path": "/Users/zztop/Library/Application Support/OrcaSlicer/user/3643112429/filament/eSUN ABS+.json",
+      "fields": {
+        "filament_max_volumetric_speed": [
+          "20"
+        ],
+        "inherits": "Voron Generic ABS",
+        "nozzle_temperature": [
+          "245"
+        ],
+        "nozzle_temperature_initial_layer": [
+          "245"
+        ],
+        "nozzle_temperature_range_low": [
+          "245"
+        ]
+      }
+    },
+    {
+      "path": "/Users/zztop/Library/Application Support/OrcaSlicer/user/3643112429/filament/eSun ABS+ Black.json",
+      "fields": {
+        "filament_max_volumetric_speed": [
+          "24"
+        ],
+        "filament_type": [
+          "ABS"
+        ],
+        "filament_vendor": [
+          "Generic"
+        ],
+        "inherits": "Voron Generic ABS",
+        "nozzle_temperature": [
+          "255"
+        ],
+        "nozzle_temperature_initial_layer": [
+          "255"
+        ],
+        "nozzle_temperature_range_high": [
+          "280"
+        ],
+        "nozzle_temperature_range_low": [
+          "240"
+        ]
+      }
+    },
+    {
+      "path": "/Users/zztop/Library/Application Support/OrcaSlicer/system/OrcaFilamentLibrary/filament/base/fdm_filament_pla.json",
+      "fields": {
+        "filament_max_volumetric_speed": [
+          "12"
+        ],
+        "nozzle_temperature": [
+          "220"
+        ],
+        "nozzle_temperature_initial_layer": [
+          "220"
+        ],
+        "nozzle_temperature_range_low": [
+          "190"
+        ],
+        "nozzle_temperature_range_high": [
+          "240"
+        ]
+      }
+    },
+    {
+      "path": "/Users/zztop/Library/Application Support/OrcaSlicer/system/OrcaFilamentLibrary/filament/base/fdm_filament_abs.json",
+      "fields": {
+        "filament_max_volumetric_speed": [
+          "12"
+        ],
+        "nozzle_temperature": [
+          "260"
+        ],
+        "nozzle_temperature_initial_layer": [
+          "260"
+        ],
+        "nozzle_temperature_range_high": [
+          "280"
+        ],
+        "nozzle_temperature_range_low": [
+          "240"
+        ]
+      }
+    },
+    {
+      "path": "/Users/zztop/Library/Application Support/OrcaSlicer/system/OrcaFilamentLibrary/filament/base/fdm_filament_asa.json",
+      "fields": {
+        "filament_max_volumetric_speed": [
+          "12"
+        ],
+        "nozzle_temperature": [
+          "260"
+        ],
+        "nozzle_temperature_initial_layer": [
+          "260"
+        ],
+        "nozzle_temperature_range_high": [
+          "280"
+        ],
+        "nozzle_temperature_range_low": [
+          "240"
+        ]
+      }
+    }
+  ],
+  "gcode_evidence": {
+    "file": "/Users/zztop/Downloads/Teebagholder_Box_plus5mm_PLA_3h41m.gcode",
+    "profiles": [
+      "HTP ASA Green",
+      "FDPlast PLA",
+      "HTP ASA Gray"
+    ],
+    "low": [
+      240,
+      190,
+      240
+    ],
+    "high": [
+      280,
+      240,
+      280
+    ],
+    "max_volumetric_speed": [
+      24,
+      12,
+      18
+    ]
+  },
+  "limits": "The 250C PLA short transition allowance, exposure budget and purge volumes are initial calibration choices, not verified manufacturer specifications. Ecofil custom profiles were not found; the user requested 220C for PLA."
+}
