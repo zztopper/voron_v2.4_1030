@@ -7,7 +7,7 @@ import json
 import math
 import shlex
 
-VERSION = '2.0.1'
+VERSION = '2.0.0'
 
 
 def key(value):
@@ -140,7 +140,6 @@ class MaterialTransition:
         self.printer.register_event_handler('klippy:connect', self.connect)
         for name, callback in [('AFC_TRANSITION_PURGE', self.purge),
                                ('AFC_TRANSITION_CHECK', self.check_command),
-                               ('AFC_TRANSITION_BLOB_DONE', self.blob_done),
                                ('AFC_TRANSITION_STATUS', self.status),
                                ('AFC_TRANSITION_CLEANED', self.cleaned),
                                ('AFC_TRANSITION_CONFIRM_CURRENT', self.confirm_current)]:
@@ -183,35 +182,6 @@ class MaterialTransition:
         self.afc.CHANGE_TOOL, self.afc._check_extruder_temp = self.change, self.check_temperature
         self.afc.move_e_pos = self.move_e
         self.afc.poop_cmd = 'AFC_TRANSITION_PURGE'
-        # AFC_RESUME clears AFC's error flag but must not bypass a failed thermal purge.
-        self.pause_resume = self.printer.lookup_object('pause_resume')
-        self.original_resume = self.pause_resume.send_resume_command
-        self.pause_resume.send_resume_command = self.resume
-        sd = self.printer.lookup_object('virtual_sdcard', None)
-        if sd is not None:
-            self.original_sd_resume = sd.do_resume
-            sd.do_resume = self.sd_resume
-
-    def require_ready(self):
-        if self.active is not None or self.state['stage'] != 'ready':
-            self.fail('Resume blocked: material transition is not ready; inspect and recover the hotend first')
-        lane = self.afc.lanes.get(self.afc.current)
-        if lane is None:
-            self.fail('Resume blocked: no loaded lane')
-        name, profile = self.policy.profile(lane.material)
-        if not self.state['residue'] or any(r['material'] != name for r in self.state['residue']):
-            self.fail('Resume blocked: lane material conflicts with confirmed hotend residue')
-        temp, target = self.heater.get_temp(self.reactor.monotonic())
-        if not profile['print_min'] <= target <= profile['print_max'] or abs(temp-target) > 5:
-            self.fail('Resume blocked: wait for nozzle to reach a valid printing temperature')
-
-    def resume(self):
-        self.require_ready()
-        return self.original_resume()
-
-    def sd_resume(self):
-        self.require_ready()
-        return self.original_sd_resume()
 
     def run(self, script):
         self.gcode.run_script_from_command(script)
@@ -336,8 +306,6 @@ class MaterialTransition:
     def load(self, lane, purge_length=None):
         if lane is None:
             return self.original_load(lane, purge_length)
-        if self.afc.error_state:
-            self.fail('AFC still has an unresolved error; resolve it before TOOL_LOAD (no filament was fed)')
         plan = self.plan(lane, purge_length)
         self.active = plan
         self.mode = ('load', plan['load_temperature'])
@@ -391,22 +359,12 @@ class MaterialTransition:
 
     def blob(self, volume, flow):
         self.guard(feeding=True)
-        completed = self.active.get('completed_blobs', 0)
         self.run('SET_GCODE_VARIABLE MACRO=_AFC_POOP_VARS VARIABLE=purge_spd VALUE=%.5f\n'
-                 'AFC_TRANSITION_BLOB PURGE_LENGTH=%.5f CHUNK_LENGTH=%.5f'
+                 'AFC_V2_BLOB PURGE_LENGTH=%.5f CHUNK_LENGTH=%.5f'
                  % (flow/self.policy.area, volume/self.policy.area,
                     min(self.policy.defaults['chunk_volume'],flow*2.)/self.policy.area))
         self.toolhead.wait_moves()
         self.guard(feeding=True)
-        if self.active.get('completed_blobs', 0) != completed + 1:
-            self.fail('Purge macro did not acknowledge completion; no next phase is allowed')
-
-    def blob_done(self, gcmd):
-        if self.active is None:
-            self.fail('Blob completion is only valid during guarded TOOL_LOAD')
-        self.toolhead.wait_moves()
-        self.guard(feeding=True)
-        self.active['completed_blobs'] = self.active.get('completed_blobs', 0) + 1
 
     def check_command(self, gcmd):
         if not self.active:

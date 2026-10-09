@@ -110,7 +110,7 @@
       "flush_flow": 6
     },
     "PLA->PLA": {
-      "flush_temperature": 220,
+      "flush_temperature": 240,
       "displace_volume": 45,
       "mix_volume": 45,
       "flush_flow": 6
